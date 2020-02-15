@@ -13,6 +13,7 @@ const StartScreen = e => {
             onClick={() => {
               e.changeHidden("");
               closeStartScreen("main_start__container hidden");
+              e.openSecond("choose_container visible");
             }}
           />
           {/* <button

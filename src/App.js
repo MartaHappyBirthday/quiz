@@ -18,12 +18,11 @@ function App() {
   const [hidden, changeHidden] = useState("hidden");
   // const [finalText, changeFinalText] = useState('');
   const [containerStyle, changeContainerStyle] = useState("container");
-
+  const [screenStatus, openSecond] = useState("choose_container hidden");
   const nextQuestion = e => {
     const newCount = count + 1;
     const newAnswerValue = answerValue + +e;
     if (count === 2 && sex === "male") {
-      console.log("qwe");
       changeContainerStyle(`container${count}m`);
     } else if (count === 2 && sex === "female") {
       changeContainerStyle(`container${count}f`);
@@ -32,27 +31,30 @@ function App() {
     }
     setCount(newCount);
     setAnswerValue(newAnswerValue);
-
-    console.log(count);
   };
   const backgroundImagePath = require(`./img/${
-    count + 1 < 5 ? count + 1 : 1
+    count + 1 < 6 ? count + 1 : 1
   }.png`);
   // `${'backgroundImage:url(./img/'}${count}.png);`;
-  if (count < 5) {
+  if (count < 6) {
     return (
       <div className={containerStyle}>
-        <StartScreen changeHidden={changeHidden} />
-        <SecondScreen getSex={getSex} changeHidden={changeHidden} />
-        <div className={`logo_arts ${hidden}`}>
+        <StartScreen changeHidden={changeHidden} openSecond={openSecond} />
+        <SecondScreen
+          getSex={getSex}
+          screenStatus={screenStatus}
+          openSecond={openSecond}
+        />
+        {/* <div className={`logo_arts ${hidden}`}>
           <i
             className="main_photo"
             style={{ backgroundImage: `url(${backgroundImagePath})` }}
           />
-        </div>
-        <div className={`questions_answers ${hidden}`}>
+        </div> */}
+        <div className={`questions_answers${count} ${hidden}`}>
           {/* <div className="questions">{questions(count, sex)}</div> */}
           <div className={`answers_container${count}`}>
+            <p className="question_mobile">{questions(count, sex)}</p>
             <div className="answer_item">
               <button
                 className={`answer_button${count}`}
@@ -113,18 +115,16 @@ function App() {
   let finalContainer;
   if (answerValue <= 1 && sex === "male") {
     finalContainer = "final_container1m";
-  } else if (answerValue === 2 && sex === "female") {
-    finalContainer = "final_container1f";
-  } else if (answerValue <= 1 && sex === "female") {
+  } else if (answerValue === 2 && sex === "male") {
     finalContainer = "final_container2m";
+  } else if (answerValue <= 1 && sex === "female") {
+    finalContainer = "final_container1f";
   } else if (answerValue === 2 && sex === "female") {
     finalContainer = "final_container2f";
   }
   return (
     <div className={finalContainer}>
-      <div className="start_screen">
-        <div className="all_info " />
-      </div>
+      <div className="all_info " />
     </div>
   );
 }

@@ -3,19 +3,18 @@ import React, { useState } from "react";
 import Choose from "../img/choose.png";
 
 const SecondScreen = e => {
-  const [screenStatus, closeSecondScreen] = useState(
-    "choose_container visible"
+  const [secondScreenStatus, closeSecondScreen] = useState(
+    "choose_container hidden"
   );
   return (
-    <div className={screenStatus}>
+    <div className={e.screenStatus}>
       <img src={Choose} alt="Choose" className="choose_img" />
       <div className="choose_container__buttons">
         <button
           className="choose_container__button"
           onClick={() => {
             e.getSex("male");
-            closeSecondScreen("choose_container hidden");
-            e.changeHidden("");
+            e.openSecond("choose_container hidden");
           }}
         >
           Наследник
@@ -24,8 +23,7 @@ const SecondScreen = e => {
           className="choose_container__button"
           onClick={() => {
             e.getSex("female");
-            closeSecondScreen("choose_container hidden");
-            e.changeHidden("");
+            e.openSecond("choose_container hidden");
           }}
         >
           Наследница
