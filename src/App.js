@@ -16,7 +16,6 @@ function App() {
   const [answerValue, setAnswerValue] = useState(0);
   const [sex, getSex] = useState(null);
   const [hidden, changeHidden] = useState("hidden");
-  // const [finalText, changeFinalText] = useState('');
   const [containerStyle, changeContainerStyle] = useState("container");
   const [screenStatus, openSecond] = useState("choose_container hidden");
   const nextQuestion = e => {
@@ -54,7 +53,7 @@ function App() {
         <div className={`questions_answers${count} ${hidden}`}>
           {/* <div className="questions">{questions(count, sex)}</div> */}
           <div className={`answers_container${count}`}>
-            <p className="question_mobile">{questions(count, sex)}</p>
+            <div className="question_mobile">{questions(count, sex)}</div>
             <div className="answer_item">
               <button
                 className={`answer_button${count}`}
@@ -72,7 +71,7 @@ function App() {
               <button
                 className={`answer_button${count}`}
                 onClick={() => {
-                  nextQuestion.bind(null, answers[count].group[0].value)();
+                  nextQuestion.bind(null, answers[count].group[1].value)();
                 }}
                 count={answers[count].group[1].value}
               >
@@ -98,7 +97,7 @@ function App() {
               <button
                 className={`answer_button${count}`}
                 onClick={() => {
-                  nextQuestion.bind(null, answers[count].group[0].value)();
+                  nextQuestion.bind(null, answers[count].group[3].value)();
                 }}
                 count={answers[count].group[3].value}
               >
@@ -113,6 +112,7 @@ function App() {
     );
   }
   let finalContainer;
+  console.log(answerValue);
   if (answerValue <= 1 && sex === "male") {
     finalContainer = "final_container1m";
   } else if (answerValue === 2 && sex === "male") {
