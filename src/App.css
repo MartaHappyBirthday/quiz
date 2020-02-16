@@ -481,6 +481,9 @@
     justify-content: flex-end;
     line-height: 5vh;
   }
+  .final_container1f {
+    background-size: 105% 100%;
+  }
   .finalWords {
     color: white;
     font-size: 4vh;
