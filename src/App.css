@@ -617,10 +617,11 @@
   .choose_container__buttons {
     flex-direction: column;
     margin: 0 0 7vh 0;
-    height: 30vh;
+    height: 32vh;
     align-content: center;
   }
   .choose_container__button {
+    height: 13vh;
     background: white;
     margin-top: 8vh;
     width: 93vw;
