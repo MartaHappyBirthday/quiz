@@ -270,6 +270,7 @@
 .answer_button4,
 .answer_button5 {
   border: 5px solid #6d3bbb;
+  background: white;
   color: #6d3bbb;
   font-size: 2.8vh;
   height: 75%;
@@ -421,6 +422,7 @@
   .answer_button2,
   .answer_button3,
   .answer_button4 {
+    background: white;
     font-size: 2.8vh;
   }
 
@@ -440,11 +442,9 @@
   }
   .quesions_text {
     height: 55px;
-    padding-left: 20px;
     margin-top: 2%;
     font-size: 1.3vh;
     display: flex;
-    padding: 0 0 0 10px;
     align-items: center;
     width: 65%;
     text-align: justify;
@@ -526,6 +526,7 @@
   .answers_container5 {
     height: 80vh;
     margin-top: 10vh;
+    margin-bottom: 0;
   }
   .answers_container2 {
     margin: 0 0 2vh 0;
@@ -555,9 +556,9 @@
   }
 
   .quesions_text {
-    width: 90%;
-    font-size: 3.5vh;
-    margin-top: 17vh;
+    width: 100%;
+    font-size: 3.2vh;
+    margin-top: 20vh;
     color: white;
     display: flex;
     justify-content: center;
@@ -575,7 +576,7 @@
   .questions_answers3,
   .questions_answers4,
   .questions_answers5 {
-    margin-top: 23vh;
+    margin-top: 17vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -610,6 +611,7 @@
     background: url("./img/mobileback2.png");
     background-size: 270%;
     background-position: 55% 0%;
+    background-repeat: no-repeat;
     justify-content: flex-end;
   }
   .choose_container__buttons {
@@ -629,6 +631,7 @@
   .answer_button3,
   .answer_button4 {
     height: 10vh;
+    background: white;
     font-size: 2.3vh;
     margin-top: 1vh;
     width: 90vw;
@@ -661,6 +664,7 @@
     height: 20%;
   }
   .answer_button {
+    background: white;
     font-size: 1.7vh;
     background: none;
     display: flex;
