@@ -474,8 +474,8 @@
   .final_container1f,
   .final_container2m,
   .final_container2f {
-    background-size: cover;
-    background-position: 55%;
+    background-size: 260% 100%;
+    background-position: 55% 10%;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
