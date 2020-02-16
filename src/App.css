@@ -512,8 +512,10 @@
   .container2m,
   .container3,
   .container4 {
-    background-size: cover;
-    background-position: 55%;
+    /* background-size: cover; */
+    background-size: 270%;
+
+    background-position: 55% 0;
   }
   .answers_container0,
   .answers_container1,
@@ -636,6 +638,10 @@
     font-size: 2.3vh;
     margin-top: 1vh;
     width: 90vw;
+  }
+  .answer_button4 {
+    margin: 0;
+    height: 8vh;
   }
   .start_screen__container {
     height: auto;
