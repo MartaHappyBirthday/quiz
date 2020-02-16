@@ -608,13 +608,14 @@
 
   .choose_container {
     background: url("./img/mobileback2.png");
-    background-size: 260%;
+    background-size: 270%;
     background-position: 55% 0%;
     justify-content: flex-end;
   }
   .choose_container__buttons {
     flex-direction: column;
     margin: 0 0 7vh 0;
+    height: 30vh;
     align-content: center;
   }
   .choose_container__button {
