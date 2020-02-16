@@ -516,7 +516,7 @@
   .container3,
   .container4 {
     /* background-size: cover; */
-    background-size: 270%;
+    background-size: 270% 100%;
 
     background-position: 55% 0;
   }
@@ -529,8 +529,11 @@
     width: 90%;
     margin-bottom: 5vh;
   }
+  .answers_container4 {
+    margin-bottom: 1vh;
+  }
   .answers_container5 {
-    height: 80vh;
+    height: 60vh;
     margin-top: 10vh;
     margin-bottom: 0;
   }
